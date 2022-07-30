@@ -2,21 +2,21 @@ using System.Collections.Generic;
 
 namespace Minsk.Analysis.Syntax
 {
-     class NumberExpressionSyntax : ExpressionSyntax
+     class LiteralExpressionSyntex : ExpressionSyntax
      {
 
-          public NumberExpressionSyntax(SyntaxToken numbertoken)
+          public LiteralExpressionSyntex(SyntaxToken literalToken)
           {
-               NumberToken = numbertoken;
+               LiteralToken = literalToken;
           }
 
-          public SyntaxToken NumberToken { get; }
+          public SyntaxToken LiteralToken { get; }
 
           public override SyntaxKind Kind => SyntaxKind.NumberExpression;
 
           public override IEnumerable<SyntaxNode> GetChildren()
           {
-               yield return NumberToken;
+               yield return LiteralToken;
           }
 
      }

@@ -1,6 +1,6 @@
 namespace Minsk.Analysis.Syntax
 {
-     enum SyntaxKind
+     public enum SyntaxKind
      {
           BinaryExpression,
           NumberExpression,

@@ -11,7 +11,7 @@ namespace Minsk
      {
           public static void Main(string[] args)
           {
-               bool showtree = false;
+               var showtree = false;
                while (true)
                {
                     Console.Write("> ");
@@ -33,13 +33,12 @@ namespace Minsk
 
                     var syntaxTree = SyntaxTree.Parse(line);
                     
-                    var color = Console.ForegroundColor;
                
                     if (showtree)
                     {
                          Console.ForegroundColor = ConsoleColor.DarkGray;
                          PrettyPrint(syntaxTree.Root);
-                         Console.ForegroundColor = color;
+                         Console.ResetColor();
                     }
 
 
@@ -47,7 +46,6 @@ namespace Minsk
                     {
                          var e = new Evaluater(syntaxTree.Root);
                          var result = e.Evaluator();
-
                          Console.WriteLine(result);
                     }
                     else
@@ -57,7 +55,7 @@ namespace Minsk
                          {
                               Console.WriteLine(diagonstic);
                          }
-                         Console.ForegroundColor = color;
+                         Console.ResetColor();
                     }
                }
           }

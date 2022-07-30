@@ -111,7 +111,7 @@ namespace Minsk.Analysis
 
                var numbertoken = Match(SyntaxKind.NumberToken);
 
-               return new NumberExpressionSyntax(numbertoken);
+               return new LiteralExpressionSyntex(numbertoken);
 
           }
      }

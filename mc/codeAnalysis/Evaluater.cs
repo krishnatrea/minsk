@@ -20,9 +20,9 @@ namespace Minsk.Analysis
           private int EvaluateExpression(ExpressionSyntax node)
           {
 
-               if (node is NumberExpressionSyntax n)
+               if (node is LiteralExpressionSyntex n)
                {
-                    return (int)n.NumberToken.Value;
+                    return (int)n.LiteralToken.Value;
                }
 
                if (node is BinaryExpressionSyntax b)
