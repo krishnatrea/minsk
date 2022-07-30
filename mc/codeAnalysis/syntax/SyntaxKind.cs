@@ -3,7 +3,7 @@ namespace Minsk.Analysis.Syntax
      public enum SyntaxKind
      {
           BinaryExpression,
-          NumberExpression,
+          LiteralExpression,
           NumberToken,
           WhiteSpaceToken,
           PlusToken,
